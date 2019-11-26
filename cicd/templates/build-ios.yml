@@ -35,10 +35,10 @@ jobs:
           provProfileSecureFile: 'AgoraAppsDevProfile.mobileprovision'
           
       - task: DownloadSecureFile@1
-          name: SensemeLicense
-          displayName: 'Download SENSEME License'
-          inputs:
-            secureFile: 'SENSEME.lic'
+        name: SensemeLicense
+        displayName: 'Download SENSEME License'
+        inputs:
+          secureFile: 'SENSEME.lic'
             
       - script: cd ${{ parameters.workingDirectory }} && cp $(SensemeLicense.secureFilePath) Agora-With-SenseTime/SenseTimePart/st_mobile/license/
 
